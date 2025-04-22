@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import jwt, { SignOptions } from 'jsonwebtoken';
 import { User } from '../models/User';
 
-export const signup = async (req: Request, res: Response) => {
+export const register = async (req: Request, res: Response) => {
   try {
     const { name, username, email, password } = req.body;
 
@@ -30,7 +30,7 @@ export const signup = async (req: Request, res: Response) => {
     const token = jwt.sign(
       { id: user._id },
       process.env.JWT_SECRET!,
-      { expiresIn: process.env.JWT_EXPIRES_IN } as SignOptions
+      { expiresIn: process.env.JWT_EXPIRES_IN} as SignOptions
     );
 
     res.status(201).json({

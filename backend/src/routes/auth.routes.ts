@@ -1,11 +1,11 @@
 import { Router } from 'express';
-import { signup, login } from '../controllers/auth.controller';
+import { register, login } from '../controllers/auth.controller';
 import { body } from 'express-validator';
 
 const router = Router();
 
 // Validation middleware
-const validateSignup = [
+const validateRegister = [
   body('name').trim().notEmpty().withMessage('Name is required'),
   body('username')
     .trim()
@@ -38,7 +38,7 @@ const validateLogin = [
 ];
 
 // Routes
-router.post('/signup', validateSignup, signup);
+router.post('/register', validateRegister, register);
 router.post('/login', validateLogin, login);
 
 export default router; 
