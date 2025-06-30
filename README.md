@@ -1,10 +1,10 @@
-# Aarupadaiyappan Community Platform
+# Murugan-Dev Community Platform
 
 A modern community platform built with Node.js, TypeScript, and Express.
 
 ## Project Overview
 
-Aarupadaiyappan is a community platform that provides a space for users to connect, share, and engage with each other. The platform features user authentication, social media integration, and file upload capabilities.
+Murugan community is a community platform that provides a space for users to connect, share, and engage with each other. The platform features user authentication, social media integration, and file upload capabilities.
 
 ## Features
 
